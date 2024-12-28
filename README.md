@@ -1,1 +1,2 @@
-# git-test2
+code .
+Hello Odin!
