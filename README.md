@@ -95,3 +95,8 @@ Enterprise Outcomes
 - Policy governance health: frequency of style profile changes, approval latency, and breakage incidents.
 
 
+EXAMPLES
+Output A (Style Profile: “minimal, concise, fewer comments”)
+
+
+Output B (Style Profile: “typed, explicit, guard clauses, Google docstrings”)
