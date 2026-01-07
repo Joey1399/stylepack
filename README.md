@@ -40,7 +40,45 @@ A structured representation of style:
 
 ### 4) Optional formatter configuration
 - For C/C++: best-effort `.clang-format` emitted/tuned to match observed formatting
-- For Python: Black guidance/config stu
+- For Python: Black guidance/config stub (Black is intentionally opinionated)
+
+---
+
+## Supported inputs (planned)
+
+- Code repos (C++, Python, JS/TS, etc.)
+- Markdown/docs/articles
+- Plain text notes
+- “Golden files” list (hand-picked best examples)
+- “Anti-examples” list (things you explicitly *don’t* want)
+
+---
+
+## How it works (high-level)
+
+stylepack is designed to separate **style** from **substance**:
+
+1. **Ingest**
+   - collect samples + metadata (paths, languages, timestamps)
+2. **Normalize**
+   - extract text/code in a consistent internal format
+3. **Signal extraction**
+   - formatting cues (indent/braces/wrapping)
+   - naming conventions (snake_case vs camelCase, acronyms, prefixes)
+   - structural habits (function size, helper patterns, file organization)
+   - comment/documentation patterns (docstrings, headers, inline comments)
+   - for prose: tone cues, cadence, punctuation habits, section structure
+4. **Distillation**
+   - generate a compact Style Profile (rules + exemplars)
+   - avoid “overprompting” by keeping exemplars short and representative
+5. **(Optional) Apply + Validate**
+   - generate a style-aware preamble for any LLM prompt
+   - score a generated output for “style adherence” and flag violations
+
+---
+
+## Example project layout (planned)
+
 
 
 
