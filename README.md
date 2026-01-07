@@ -14,6 +14,7 @@ A) PROBLEM
   • prevent semantic/logic “template reuse” when examples are provided.
 
 B) SOLUTION + SCOPE
+
 Solution concept: A versioned, reusable “Style Profile” (aka style policy) per language that is applied during LLM-assisted
 generation and refactoring. The Style Profile is created by compiling a user/team’s code corpus into constraints and
 configuration (style transfer without semantic transfer).
@@ -27,6 +28,7 @@ Core principles:
 - Versioning + governance: profiles are versioned, auditable, and pin-able to repos/branches; enterprise profiles support RBAC/approval.
 
 1B) SMALL (1–2 USER) CODEBASES — PERSONAL CONSISTENCY
+
 Goal: Make output look like “my code” so it’s immediately readable and maintainable.
 Scope:
 - Personal Style Profile per language (e.g., Python, TS).
@@ -35,6 +37,7 @@ Scope:
 - Default to style-only mode (prevents copying the “meat” of the corpus).
 
 2B) ENTERPRISE (MULTI-USER) CODEBASES — ORG STANDARDIZATION
+
 Goal: Enforce a single house style across many developers and LLM contributions.
 Scope:
 - Org Style Profile per language, with repo-level overrides and user-level preferences where allowed.
