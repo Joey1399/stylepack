@@ -96,7 +96,10 @@ Enterprise Outcomes
 
 
 EXAMPLES
+
 Output A (Style Profile: “minimal, concise, fewer comments”)
+![IMG_1893](https://github.com/user-attachments/assets/67aa19aa-e103-4843-98a0-90fe12a14d25)
 
 
 Output B (Style Profile: “typed, explicit, guard clauses, Google docstrings”)
+![IMG_1892](https://github.com/user-attachments/assets/30240f55-1cf7-4b7e-b4ff-4381dacacba1)
