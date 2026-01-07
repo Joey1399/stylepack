@@ -1,5 +1,61 @@
-STYLE PROFILE FOR LLM CODING TOOLS/AGENTS - PRODUCT BRIEF
-==========================================================
+# stylepack
+
+Local-first **style profiling + style packaging** for LLM workflows.  
+Turn your existing **code samples, writing samples, articles, and snippets** into a compact **Style Profile** that helps LLM outputs match your “voice” and conventions—without pasting giant examples into every prompt.
+
+---
+
+## Why this exists
+
+LLM output often feels “generic”:
+- code uses odd conventions that don’t match your repo
+- writing lacks voice/cadence and reads obviously AI-generated
+- dumping lots of examples into prompts is expensive, noisy, and inconsistent
+
+**stylepack** aims to solve that by **distilling style into a small, reusable bundle** that can be injected into prompts or exported into editor/agent instruction files.
+
+---
+
+## What stylepack generates
+
+Given a folder of samples, stylepack produces:
+
+### 1) `style.md` — Human-readable Style Profile
+A concise style guide:
+- do/don’t rules
+- tone, structure, naming, comment patterns
+- preferred idioms and “house style”
+- a small number of short “golden exemplars” (high signal, not giant dumps)
+
+### 2) `style.json` — Machine-readable StyleSpec
+A structured representation of style:
+- detected conventions + confidence
+- rule weights/priorities
+- exemplar pointers
+- optional language-specific sections
+
+### 3) Optional exports (editor/agent integrations)
+- **Cursor rules export**: generates rules files under `.cursor/rules/`
+- **GitHub Copilot instructions export**: writes `.github/copilot-instructions.md`
+
+### 4) Optional formatter configuration
+- For C/C++: best-effort `.clang-format` emitted/tuned to match observed formatting
+- For Python: Black guidance/config stu
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+#PRODUCT BRIEF/NOTES
 
 A) PROBLEM
 - LLM-generated code often arrives in a “default model style” that differs from a developer/team’s established conventions.
