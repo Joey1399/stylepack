@@ -80,16 +80,27 @@ stylepack is designed to separate **style** from **substance**:
 ## Example project layout (planned)
 
 stylepack/
+
 stylepack/
+
 main.py
-cli.py
+
+- cli.py
+
 ingest/
+
 signals/
+
 distill/
+
 export/
+
 score/
+
 examples/
+
 tests/
+
 README.md
 
 
