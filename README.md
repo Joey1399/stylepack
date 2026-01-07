@@ -13,6 +13,9 @@ A) PROBLEM
   • encode higher-level style (naming, error handling, docstrings, module structure), or
   • prevent semantic/logic “template reuse” when examples are provided.
 
+
+
+
 B) SOLUTION + SCOPE
 
 Solution concept: A versioned, reusable “Style Profile” (aka style policy) per language that is applied during LLM-assisted
@@ -44,6 +47,9 @@ Scope:
 - CI gate: “must comply with org/repo style profile” (formatter/linter required).
 - Migration tooling: safe, staged normalization of heterogeneous codebases via batch PRs (format -> lint autofix -> codemods).
 - Governance: RBAC, approvals, version pinning, and change logs for style policy updates.
+
+
+
 
 C) USER FLOWS (CREATE + USE FROM USER POV)
 1) Create a Style Profile (Onboarding)
@@ -80,6 +86,9 @@ C) USER FLOWS (CREATE + USE FROM USER POV)
   • Stage 2: lint autofixes
   • Stage 3: AST codemods (opt-in; guarded by tests)
 - System generates batch PRs with CI checks + rollback support.
+
+
+
 
 D) SUCCESS METRICS
 Quality/Compliance
