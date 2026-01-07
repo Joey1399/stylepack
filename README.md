@@ -104,6 +104,75 @@ tests/
 README.md
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+---
+
+## CLI sketch (planned)
+
+> These are placeholder commands for the future implementation.
+
+- `stylepack init ./samples --lang cpp`
+  - generates `style.md` + `style.json`
+- `stylepack export cursor`
+  - writes Cursor rules into `.cursor/rules/`
+- `stylepack export copilot`
+  - writes `.github/copilot-instructions.md`
+- `stylepack build-preamble --budget 600`
+  - prints a compact “style preamble” for prompt injection
+- `stylepack score --generated out.txt --reference ./samples`
+  - reports style adherence + top violations
+
+---
+
+## What “style” means here (so it’s not just formatting)
+
+Formatters handle surface formatting well, but stylepack targets higher-level conventions:
+
+### Code
+- naming conventions (identifiers, files, modules)
+- preferred structure (early returns, helper layout, error handling patterns)
+- comment / doc style (tone, density, doc templates)
+- architectural idioms (how you organize “small units”)
+
+### Writing
+- voice/tone (formal vs casual, direct vs narrative)
+- cadence (sentence length patterns, punctuation habits)
+- structural templates (how intros/conclusions are written)
+- vocabulary bias (preferred words/phrases, “avoid list”)
+
+---
+
+## Guardrails (recommended)
+
+This kind of tool can be abused for impersonation. Intended use:
+- profiling your **own** writing/code
+- profiling your **team’s** repo with permission
+- creating a brand voice you own
+
+Suggested design choices:
+- provenance logs (what sources contributed to which rules)
+- explicit confirmation that the user has rights to the samples
+
+---
+
+## Roadmap ideas (future you)
+
+- Language plugins: `cpp`, `python`, `js`, `markdown`
+- “Style conflicts” detector (mixed conventions inside a repo)
+- Auto-tuning loop for `.clang-format` based on diff minimization
+- “Voice dial” (more/less formal/terse) while preserving signature
+- CI integration: score diffs against StyleSpec; fail if under threshold
+- IDE extension: show “why” a rule fired + quick fixes
+
+---
+
+## Non-goals (for sanity)
+
+- Not trying to replace linters/formatters
+- Not trying to fully “train a model” (this is prompt + workflow tooling)
+- Not trying to guarantee perfect voice cloning—goal is **consistent style adherence**
+
 
 
 
